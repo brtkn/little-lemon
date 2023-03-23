@@ -1,4 +1,5 @@
 import { motion } from "framer-motion";
+import { Link } from "react-router-dom";
 
 export default function NavLinks(props) {
   const animateFrom = { opacity: 0, y: -40 };
@@ -12,7 +13,7 @@ export default function NavLinks(props) {
         transition={{ delay: 0.05 }}
         onClick={() => props.isMobile && props.closeMobileMenu()}
       >
-        <a href="/">Home</a>
+        <Link to="/">Home</Link>
       </motion.li>
       <motion.li
         initial={animateFrom}
@@ -20,7 +21,7 @@ export default function NavLinks(props) {
         transition={{ delay: 0.1 }}
         onClick={() => props.isMobile && props.closeMobileMenu()}
       >
-        <a href="/#about">About</a>
+        <Link href="">About</Link>
       </motion.li>
       <motion.li
         initial={animateFrom}
@@ -28,7 +29,7 @@ export default function NavLinks(props) {
         transition={{ delay: 0.2 }}
         onClick={() => props.isMobile && props.closeMobileMenu()}
       >
-        <a href="/#skills">Menu</a>
+        <Link to="">Menu</Link>
       </motion.li>
       <motion.li
         initial={animateFrom}
@@ -36,7 +37,7 @@ export default function NavLinks(props) {
         transition={{ delay: 0.3 }}
         onClick={() => props.isMobile && props.closeMobileMenu()}
       >
-        <a href="/#youtube">Reservations</a>
+        <Link to="/booking">Reservations</Link>
       </motion.li>
       <motion.li
         initial={animateFrom}
@@ -44,7 +45,7 @@ export default function NavLinks(props) {
         transition={{ delay: 0.4 }}
         onClick={() => props.isMobile && props.closeMobileMenu()}
       >
-        <a href="/#contact">Order Online</a>
+        <Link to="/booking">Order Online</Link>
       </motion.li>
     </ul>
   );

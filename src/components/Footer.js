@@ -1,24 +1,25 @@
+import { Link } from "react-router-dom";
 import lemonLogo from "../icons_assets/Logo1.svg";
 
 export default function Footer() {
   return (
-    <footer>
+    <footer id="footernav">
       <div>
         <img alt="little lemon logo" src={lemonLogo} />
       </div>
       <div>
         <ul>
           <li>
-            <a href="home">Home</a>
+            <Link to="/">Home</Link>
           </li>
           <li>
-            <a href="about">About</a>
+            <Link to="">About</Link>
           </li>
           <li>
-            <a href="menu">Menu</a>
+            <Link to="">Menu</Link>
           </li>
           <li>
-            <a href="reservations">Reservations</a>
+            <Link to="">Reservations</Link>
           </li>
         </ul>
       </div>

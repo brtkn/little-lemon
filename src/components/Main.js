@@ -4,7 +4,7 @@ import Testimonials from "./Testimonials";
 
 export default function Main() {
   return (
-    <main>
+    <main id="main">
       <Hero />
       <Highlights />
       <Testimonials />
