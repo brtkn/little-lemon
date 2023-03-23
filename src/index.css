@@ -1,13 +1,263 @@
-body {
+* {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  box-sizing: border-box;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+:root {
+  --yellow: #f4ce14;
+  --green: #495e57;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  margin: auto;
+  padding: 1em;
+}
+
+header img {
+  cursor: pointer;
+}
+
+/* ----------------- HERO ------------------- */
+
+.hero {
+  background-color: var(--green);
+}
+
+.hero img {
+  width: 100%;
+  height: auto;
+}
+
+.hero p {
+  color: white;
+  line-height: 1.4em;
+  margin-left: 0.5em;
+}
+
+.hero button {
+  background-color: var(--yellow);
+  border-radius: 8px;
+  padding: 0.5em;
+  margin: 0.5em 0.5em;
+}
+
+.hero button:active {
+  background-color: #15377a;
+  color: white;
+}
+
+h1 {
+  color: var(--yellow);
+  margin-bottom: 8px;
+  text-align: center;
+  padding-top: 0.5em;
+}
+
+/* ---------- Highlights ----------- */
+h2 {
+  text-align: center;
+  color: #495e57;
+}
+
+.food-card {
+  border-top: #495e57 1px solid;
+  padding: 0.3em;
+  background-color: #edefee;
+  border-radius: 1em;
+}
+
+.food-card img {
+  display: block;
+  width: 200px;
+  border-radius: 1em;
+  box-shadow: #495e57 2px 4px;
+  margin: auto;
+  margin-bottom: 0.5em;
+}
+
+.food-card button {
+  background-color: #f4ce14;
+  padding: 0.5em;
+  border-radius: 0.4em;
+  display: block;
+  margin: auto;
+  margin-top: 0.2em;
+}
+
+.food-name {
+  display: flex;
+  justify-content: space-between;
+  font-weight: bold;
+  color: #495e57;
+}
+
+/* -------------------- Testimonials --------------------------*/
+.testimonials {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 5px;
+  margin-left: 0.5em;
+}
+
+.testimonials img {
+  width: 125px;
+  border-radius: 1em;
+  box-shadow: #495e57 2px 4px;
+  display: block;
+  margin: auto;
+  margin-bottom: 0.1em;
+}
+
+.testimonials p {
+  text-align: center;
+}
+
+/* ---------------- Footer  -------------------------*/
+
+footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 90%;
+  margin: auto;
+}
+
+footer img {
+  width: 90%;
+}
+
+footer ul {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  list-style: none;
+  margin-bottom: 0.5em;
+}
+
+footer ul a {
+  text-decoration: none;
+  color: #495e57;
+  font-weight: bold;
+  font-size: 0.7em;
+  margin-left: 0.5em;
+}
+
+/* ------------------------------------------------------------------------------- */
+
+@media (min-width: 990px) {
+  header {
+    width: 80%;
+  }
+
+  .hero-container {
+    background-color: #495e57;
+  }
+  .hero {
+    display: flex;
+    justify-content: space-around;
+    margin: auto;
+    width: 80%;
+  }
+
+  .hero img {
+    width: 40%;
+    height: auto;
+    display: block;
+    border-radius: 3em;
+    padding: 2em;
+  }
+
+  h1 {
+    font-size: 3em;
+  }
+
+  .hero-text p {
+    font-size: 1.8em;
+  }
+
+  .hero-text button {
+    font-size: 1.5em;
+    margin-top: 1em;
+  }
+  /* ------ Highlights -------*/
+
+  .food-cards {
+    width: 80%;
+    margin: auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 1em;
+  }
+  h2 {
+    font-size: 3em;
+    margin: 0.5em;
+  }
+
+  .food-card img {
+    width: 320px;
+    height: 200px;
+    margin: 1.4em auto;
+  }
+
+  .food-name {
+    padding: 0.5em;
+  }
+
+  .food-card button {
+    width: 14em;
+    margin: 2em auto;
+  }
+
+  .food-card button:active {
+    background-color: var(--green);
+    color: white;
+  }
+
+  .food-card p:nth-child(3) {
+    line-height: 1.7em;
+    margin-left: 0.5em;
+  }
+
+  /* --------------- Testimonials -------------------*/
+  .testimonials {
+    width: 80%;
+    margin: 4em auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 1em;
+  }
+
+  .testimonials img {
+    border-radius: 50%;
+    padding: 0.2em;
+    margin: 1em auto;
+  }
+
+  .testimonials p {
+    font-size: 1em;
+    color: #495e57;
+    font-weight: bold;
+  }
+
+  .testimonials p:last-of-type {
+    width: 80%;
+    margin: auto;
+  }
+
+  /*------- Footer ---------------*/
+  footer {
+    width: 80%;
+    margin-bottom: 1em;
+  }
+
+  footer ul a {
+    font-size: 1em;
+    color: #495e57;
+  }
 }
