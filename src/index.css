@@ -261,3 +261,24 @@ footer ul a {
     color: #495e57;
   }
 }
+
+.booking-form {
+  display: grid;
+  border: #495e57 solid 4px;
+  max-width: 250px;
+  margin: auto;
+  gap: 20px;
+  padding: 2em;
+}
+
+.submit-button {
+  background-color: #495e57;
+  color: white;
+  padding: 1em;
+  border-radius: 0.7em;
+}
+
+.submit-button:active {
+  background-color: #f4ce14;
+  color: black;
+}
