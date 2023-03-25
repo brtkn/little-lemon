@@ -21,16 +21,9 @@ export default function NavLinks(props) {
         transition={{ delay: 0.1 }}
         onClick={() => props.isMobile && props.closeMobileMenu()}
       >
-        <Link href="">About</Link>
+        <Link to="/about">About</Link>
       </motion.li>
-      <motion.li
-        initial={animateFrom}
-        animate={animateTo}
-        transition={{ delay: 0.2 }}
-        onClick={() => props.isMobile && props.closeMobileMenu()}
-      >
-        <Link to="">Menu</Link>
-      </motion.li>
+
       <motion.li
         initial={animateFrom}
         animate={animateTo}
@@ -38,14 +31,6 @@ export default function NavLinks(props) {
         onClick={() => props.isMobile && props.closeMobileMenu()}
       >
         <Link to="/booking">Reservations</Link>
-      </motion.li>
-      <motion.li
-        initial={animateFrom}
-        animate={animateTo}
-        transition={{ delay: 0.4 }}
-        onClick={() => props.isMobile && props.closeMobileMenu()}
-      >
-        <Link to="/booking">Order Online</Link>
       </motion.li>
     </ul>
   );

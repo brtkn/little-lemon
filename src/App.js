@@ -1,8 +1,9 @@
 import { Route, Routes } from "react-router-dom";
 
 import "./App.css";
-import { useState, useReducer, useEffect } from "react";
+import { useState, useReducer } from "react";
 import Home from "./components/Home";
+import About from "./components/About";
 import BookingPage from "./components/BookingPage";
 
 function App() {
@@ -10,37 +11,8 @@ function App() {
   const [guestNumber, setGuestNumber] = useState(0);
   const [time, setTime] = useState("");
   const [occasion, setOccasion] = useState("");
-
-  // Initialize the available times when the component mounts
-  /*  useEffect(() => {
-    const today = new Date();
-    window
-      .fetchAPI(today)
-      .then((response) => setTimes(response))
-      .catch((error) => console.error(error));
-  }, []);
-
-  // Update the available times when the selected date changes
-  function handleDateChange(selectedDate) {
-    window
-      .fetchAPI(selectedDate)
-      .then((response) => setTimes(response))
-      .catch((error) => console.error(error));
-  }
-
-  // Handle form submission
-  function handleSubmit(formData) {
-    window
-      .submitAPI(formData)
-      .then((response) => {
-        if (response === true) {
-          alert("Booking submitted successfully!");
-        } else {
-          alert("There was an error submitting the booking.");
-        }
-      })
-      .catch((error) => console.error(error));
-  } */
+  const [formState, setFormState] = useState(false);
+  const [reservation, setReservation] = useState("");
 
   function initializeTimes(date) {
     // create some initial times for the given date
@@ -70,7 +42,12 @@ function App() {
 
   function handleSubmit(e) {
     e.preventDefault();
-    console.log(date, guestNumber, time, occasion);
+    if (date && guestNumber) {
+      setFormState(true);
+      setReservation(`Reservation: ${time} for ${guestNumber} people`);
+    }
+
+    console.log(date, guestNumber, occasion);
   }
 
   function handleDateChange(date) {
@@ -108,9 +85,12 @@ function App() {
               onOccasionChange={handleOccasionChange}
               availableTimes={availableTimes}
               onSubmit={handleSubmit}
+              formState={formState}
+              reservation={reservation}
             />
           }
         />
+        <Route path="/about" element={<About />} />
       </Routes>
     </>
   );

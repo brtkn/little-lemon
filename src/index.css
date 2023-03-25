@@ -262,23 +262,84 @@ footer ul a {
   }
 }
 
+/*--------- Booking Form ----------*/
+
 .booking-form {
   display: grid;
-  border: #495e57 solid 4px;
-  max-width: 250px;
+  border: #f4ce14 solid 4px;
+  width: 35%;
+  max-width: 700px;
+  min-width: 300px;
   margin: auto;
   gap: 20px;
   padding: 2em;
+  color: #f4ce14;
+  font-size: large;
+  font-weight: 900;
 }
 
 .submit-button {
-  background-color: #495e57;
-  color: white;
+  background-color: #f4ce14;
+  color: black;
   padding: 1em;
   border-radius: 0.7em;
+  margin: auto;
+  font-size: large;
+  font-weight: 800;
 }
 
 .submit-button:active {
-  background-color: #f4ce14;
-  color: black;
+  background-color: #15377a;
+  color: white;
+}
+
+button a {
+  text-decoration: none;
+}
+input[type="date"] {
+  height: 2em;
+  border: 1px solid #f4ce14;
+}
+
+input[type="number"] {
+  height: 2em;
+  border: 1px solid #f4ce14;
+}
+
+select {
+  height: 2em;
+  border: 1px solid #f4ce14;
+}
+
+input[type="date"]:focus {
+  color: red;
+  font-size: larger;
+}
+
+input[type="number"]:focus {
+  color: red;
+  font-size: larger;
+}
+
+/* --------- Booking Page-Card --------- */
+.booking-card {
+  background-color: #495e57;
+  width: 100%;
+  height: 100vh;
+  border: #f4ce14 solid 2px;
+}
+
+.booking-confirmation {
+  background-color: #325dad;
+  padding: 2em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 5%;
+  max-width: 80%;
+  margin: auto;
+  color: white;
+  font-size: larger;
+  border-radius: 2em;
+  margin-top: 2em;
 }

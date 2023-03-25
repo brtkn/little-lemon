@@ -13,9 +13,8 @@ export default function Highlights() {
             Greek salad <span>$12.99</span>
           </p>
           <p>
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quam
-            inventore quae nisi qui enim ducimus quia soluta, ipsa
-            exercitationem unde molestiae reiciendis.
+            A refreshing mix of tomatoes, cucumbers, onions, and feta cheese,
+            drizzled with olive oil and a sprinkle of oregano.
           </p>
           <div>
             <button>Order a delivery</button>
@@ -23,14 +22,13 @@ export default function Highlights() {
           </div>
         </div>
         <div className="food-card">
-          <img alt="Greek Salad" src={bruchetta} />
+          <img alt="Bruchetta" src={bruchetta} />
           <p className="food-name">
             Bruchetta <span>$6.99</span>
           </p>
           <p>
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quam
-            inventore quae nisi qui enim ducimus quia soluta, ipsa
-            exercitationem unde molestiae reiciendis.
+            Grilled bread topped with juicy tomatoes, fresh basil, and garlic,
+            finished with a balsamic glaze and a sprinkle of parmesan.
           </p>
           <div>
             <button>Order a delivery</button>
@@ -38,14 +36,13 @@ export default function Highlights() {
           </div>
         </div>
         <div className="food-card">
-          <img alt="Greek Salad" src={lemonDessert} />
+          <img alt="Lemon Dessert" src={lemonDessert} />
           <p className="food-name">
             Lemon Dessert <span>$5</span>
           </p>
           <p>
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quam
-            inventore quae nisi qui enim ducimus quia soluta, ipsa
-            exercitationem unde molestiae reiciendis.
+            A decadent lemon tart with a buttery crust and a creamy filling,
+            finished with a dollop of whipped cream and a lemon zest garnish.
           </p>
           <div>
             <button>Order a delivery</button>
